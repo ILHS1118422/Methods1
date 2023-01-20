@@ -34,6 +34,16 @@ public class Methods1 {
 		System.out.print("Height: ");
 		double h = Double.valueOf(sc.nextLine());
 		System.out.println(cylinderSurfaceArea(r, h));
+
+		// Tests triangleArea()
+		System.out.println(triangleArea(8.0, 5.2, 7.1));
+		System.out.print("Side 1: ");
+    double a = Double.valueOf(sc.nextLine());
+		System.out.print("Side 2: ");
+		double b = Double.valueOf(sc.nextLine());
+		System.out.print("Side 3: ");
+		double c = Double.valueOf(sc.nextLine());
+		System.out.println(triangleArea(a, b, c));
 	}
 
 	// Returns x, tripled
@@ -64,4 +74,13 @@ public class Methods1 {
   static double cylinderSurfaceArea(double radius, double height){
     return 2 * (Math.PI) * radius * (radius + height);
   }
+
+	// Returns the area of a triangle with sides of the lengths input
+  // UwU rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr 
+  // rawrrawrrawrrawrrawrrawrrawrrawrrawrrawrrawrrawrrawrrawrrawrrawr OwO
+	static double triangleArea(double sideA, double sideB, double sideC) {
+		double s = (sideA + sideB + sideC) / 2;
+		double area = Math.pow(s * (s - sideA) * (s - sideB) * (s - sideC), 0.5);
+		return area;
+	}
 }
