@@ -26,6 +26,14 @@ public class Methods1 {
 		System.out.print("Exponent: ");
 		int y = Integer.valueOf(sc.nextLine());
 		System.out.println(scientific(x, y));
+
+		// Tests cylinderSurfaceArea()
+    System.out.println(cylinderSurfaceArea(3.0, 4.5));
+		System.out.print("Radius: ");
+    double r = Double.valueOf(sc.nextLine());
+		System.out.print("Height: ");
+		double h = Double.valueOf(sc.nextLine());
+		System.out.println(cylinderSurfaceArea(r, h));
 	}
 
 	// Returns x, tripled
@@ -48,5 +56,12 @@ public class Methods1 {
   static double scientific(double x, int y) {
     return Math.pow(x,y);
     
+  }
+
+	// Method takes in height and radius and outputs the surface area of a cynlinder.
+	// rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr
+	// mrarawwwwawwrrrarawwwawwrrrarrwwrrrrr
+  static double cylinderSurfaceArea(double radius, double height){
+    return 2 * (Math.PI) * radius * (radius + height);
   }
 }
