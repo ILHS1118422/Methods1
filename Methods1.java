@@ -16,7 +16,8 @@ public class Methods1 {
 		displayAverageGrade("Bob Zurunkle", 78, 89);
 		displayAverageGrade("Odin Hall", 13, 8);
 
-    scientific();
+    System.out.println(scientific(6.23, 5));
+    
 	}
 
 	// Returns x, tripled
@@ -34,7 +35,8 @@ public class Methods1 {
 		double avgGrade = ((double)midterm + (double)finalExam) / 2;
 		System.out.println(studentName + ": " + avgGrade + "%");
 	}
-  static void scientific() {
+  static double scientific(double x, int y) {
+    return Math.pow(x,y);
     
   }
 }
