@@ -1,7 +1,10 @@
 import java.lang.Math.*;
+import java.util.*;
 
 public class Methods1 {
 	public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    
 		// Test for tripleIt()
 		double tripled = tripleIt(7.3);
 		System.out.println("7.3 tripled is " + tripled);
@@ -16,8 +19,13 @@ public class Methods1 {
 		displayAverageGrade("Bob Zurunkle", 78, 89);
 		displayAverageGrade("Odin Hall", 13, 8);
 
+		// Tests scientific()
     System.out.println(scientific(6.23, 5));
-    
+    System.out.print("Number to be exponentiated: ");
+    double x = Double.valueOf(sc.nextLine());
+		System.out.print("Exponent: ");
+		int y = Integer.valueOf(sc.nextLine());
+		System.out.println(scientific(x, y));
 	}
 
 	// Returns x, tripled
@@ -35,6 +43,8 @@ public class Methods1 {
 		double avgGrade = ((double)midterm + (double)finalExam) / 2;
 		System.out.println(studentName + ": " + avgGrade + "%");
 	}
+
+	// Raises x to the power of y
   static double scientific(double x, int y) {
     return Math.pow(x,y);
     
